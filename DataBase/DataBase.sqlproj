@@ -64,5 +64,9 @@
     <Build Include="dbo\Tables\Titles.sql" />
     <Build Include="dbo\Tables\Jobs.sql" />
     <Build Include="dbo\Tables\Departments.sql" />
+    <Build Include="dbo\SP\JobsObtener.sql" />
+    <Build Include="dbo\SP\JobsInsertar.sql" />
+    <Build Include="dbo\SP\JobsActualizar.sql" />
+    <Build Include="dbo\SP\JobsEliminar.sql" />
   </ItemGroup>
 </Project>
