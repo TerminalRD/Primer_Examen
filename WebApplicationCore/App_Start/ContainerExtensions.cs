@@ -13,9 +13,11 @@ namespace WebApplicationCore
 
         public static IServiceCollection AddDIContainer(this IServiceCollection services)
         {
-
-            services.AddSingleton<IDataAccess, DataAccess>();
-            services.AddTransient<IJobsService, JobsService>();//POr cada servicio que se cree para una entidad, se debe de agregar aqui
+            // Aqui van la inyeccion de dependencias
+            services.AddSingleton<IDataAccess, DataAccess>();//Primero la interfaz y luego la clase
+            services.AddTransient<IJobsService, JobsService>();//Por cada servicio que se cree para una entidad, se debe de agregar aqui
+            services.AddTransient<IDeparmentsService, DeparmentsService>();
+            services.AddTransient<ITitlesService, TitlesService>();
             return services;
         }
     }
