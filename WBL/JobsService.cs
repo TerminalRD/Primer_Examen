@@ -97,7 +97,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("JobsEliminar", new
                 {
-                    entity.Id_Puesto,
+                    entity.Id_Puesto
                 });
                 return await result;
             }

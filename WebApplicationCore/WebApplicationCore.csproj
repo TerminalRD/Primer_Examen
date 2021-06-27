@@ -26,4 +26,10 @@
     <TypeScriptCompile Include="wwwroot\App\Jobs\Grid.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <TypeScriptCompile Update="wwwroot\App\Deparments\Grid.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+
 </Project>
