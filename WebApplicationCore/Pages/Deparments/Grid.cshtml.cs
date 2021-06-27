@@ -50,7 +50,7 @@ namespace WebApplicationCore.Pages.Deparments
                     throw new Exception(message: result.MsgError);
                 }
                 TempData["Msg"] = "Se elimino correctamente";
-                return Redirect("/Deparments/Grid");
+                return Redirect("Grid");
             }
             catch (Exception ex)
             {
