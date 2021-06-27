@@ -95,7 +95,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("TitlesEliminar", new
                 {
-                    entity.Id_Titulo
+                    entity.Id_Titulo,
                 });
                 return await result;
             }

@@ -8,7 +8,7 @@ namespace Entity
 {
    public class JobsEntity: EN
     {
-        public int? Id_puesto { get; set; }
+        public int? Id_Puesto { get; set; }
         public string Nombre { get; set; }
         public int Salario { get; set; }
     }

@@ -45,7 +45,7 @@ namespace WBL
             try
             {
                 var result = sql.QueryFirstAsync<JobsEntity>("JobsObtener", new
-                { entity.Id_puesto });
+                { entity.Id_Puesto });
                 return await result;
             }
             catch (Exception)
@@ -78,7 +78,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("JobsActualizar", new
                 {
-                    entity.Id_puesto,
+                    entity.Id_Puesto,
                     entity.Nombre,
                     entity.Salario,
                     entity.Estado
@@ -97,7 +97,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("JobsEliminar", new
                 {
-                    entity.Id_puesto
+                    entity.Id_Puesto,
                 });
                 return await result;
             }
