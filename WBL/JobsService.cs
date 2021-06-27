@@ -60,7 +60,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("JobsInsertar", new
                 {
-                    entity.Name,
+                    entity.Nombre,
                     entity.Salario,
                     entity.Estado
                 });
@@ -79,7 +79,7 @@ namespace WBL
                 var result = sql.ExecuteAsync("JobsActualizar", new
                 {
                     entity.Id_puesto,
-                    entity.Name,
+                    entity.Nombre,
                     entity.Salario,
                     entity.Estado
                 });

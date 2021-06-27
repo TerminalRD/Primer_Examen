@@ -1,0 +1,4 @@
+﻿namespace JobsGrid
+{
+    $("#GridView").dataTable();
+}
