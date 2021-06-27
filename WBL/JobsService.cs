@@ -10,8 +10,11 @@ namespace WBL
 {
     public interface IJobsService
     {
+        Task<DBEntity> Create(JobsEntity entity);
+        Task<DBEntity> Delete(JobsEntity entity);
         Task<IEnumerable<JobsEntity>> Get();
         Task<JobsEntity> GetById(JobsEntity entity);
+        Task<DBEntity> Update(JobsEntity entity);
     }
 
     public class JobsService : IJobsService
