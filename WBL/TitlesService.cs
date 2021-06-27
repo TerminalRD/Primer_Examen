@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 
 namespace WBL
 {
-    public interface IJobsService
+    public interface ITitlesService
     {
-        Task<IEnumerable<JobsEntity>> Get();
-        Task<JobsEntity> GetById(JobsEntity entity);
+        Task<IEnumerable<TitlesEntity>> Get();
+        Task<TitlesEntity> GetById(TitlesEntity entity);
     }
 
-    public class JobsService : IJobsService
+    public class TitlesService : ITitlesService
     {
         private readonly IDataAccess sql; // Propiedad privada de la interfaz
 
-        public JobsService(IDataAccess _sql)
+        public TitlesService(IDataAccess _sql)
         {
             sql = _sql;
         }
 
-        public async Task<IEnumerable<JobsEntity>> Get()//SP Obtener
+        public async Task<IEnumerable<TitlesEntity>> Get()//SP Obtener
         {
             try
             {
-                var result = sql.QueryAsync<JobsEntity>(sp: "JobsObtener");
+                var result = sql.QueryAsync<TitlesEntity>(sp: "TitlesObtener");
                 return await result;
             }
             catch (Exception)
@@ -37,12 +37,12 @@ namespace WBL
             }
         }
 
-        public async Task<JobsEntity> GetById(JobsEntity entity)//SP 
+        public async Task<TitlesEntity> GetById(TitlesEntity entity)//SP 
         {
             try
             {
-                var result = sql.QueryFirstAsync<JobsEntity>("JobsObtener", new
-                { entity.Id_puesto });
+                var result = sql.QueryFirstAsync<TitlesEntity>("TitlesObtener", new
+                { entity.Id_Titulo });
                 return await result;
             }
             catch (Exception)
@@ -51,14 +51,13 @@ namespace WBL
             }
         }
 
-        public async Task<DBEntity> Create(JobsEntity entity)
+        public async Task<DBEntity> Create(TitlesEntity entity)
         {
             try
             {
-                var result = sql.ExecuteAsync("JobsInsertar", new
+                var result = sql.ExecuteAsync("TitlesInsertar", new
                 {
-                    entity.Name,
-                    entity.Salario,
+                    entity.Descripcion,
                     entity.Estado
                 });
                 return await result;
@@ -69,15 +68,14 @@ namespace WBL
             }
         }
 
-        public async Task<DBEntity> Update(JobsEntity entity) // Actualizar
+        public async Task<DBEntity> Update(TitlesEntity entity) // Actualizar
         {
             try
             {
-                var result = sql.ExecuteAsync("JobsActualizar", new
+                var result = sql.ExecuteAsync("TitlesActualizar", new
                 {
-                    entity.Id_puesto,
-                    entity.Name,
-                    entity.Salario,
+                    entity.Id_Titulo,
+                    entity.Descripcion,
                     entity.Estado
                 });
                 return await result;
@@ -88,13 +86,13 @@ namespace WBL
             }
         }
 
-        public async Task<DBEntity> Delete(JobsEntity entity) // Eliminar
+        public async Task<DBEntity> Delete(TitlesEntity entity) // Eliminar
         {
             try
             {
-                var result = sql.ExecuteAsync("JobsEliminar", new
+                var result = sql.ExecuteAsync("TitlesEliminar", new
                 {
-                    entity.Id_puesto
+                    entity.Id_Titulo
                 });
                 return await result;
             }
