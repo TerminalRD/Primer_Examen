@@ -1,4 +1,4 @@
-﻿namespace DeparmentsEdit
+﻿namespace TitlesEdit
 {
     var formulario = new Vue(
         {

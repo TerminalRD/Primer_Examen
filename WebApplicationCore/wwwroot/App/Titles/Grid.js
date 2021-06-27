@@ -1,6 +1,6 @@
 "use strict";
-var JobsGrid;
-(function (JobsGrid) {
+var TitlesGrid;
+(function (TitlesGrid) {
     if (MensajeApp != "") {
         Toast.fire({
             icon: "success", title: MensajeApp
@@ -10,11 +10,11 @@ var JobsGrid;
         ComfirmAlert("¿Desea eliminar el registro?", "Eliminar", "warning", "#3085d6", "d33")
             .then(function (result) {
             if (result.isConfirmed) {
-                window.location.href = "/Deparments/Grid?handler=Eliminar&id=" + id;
+                window.location.href = "/Titles/Grid?handler=Eliminar&id=" + id;
             }
         });
     }
-    JobsGrid.OnClickEliminar = OnClickEliminar;
+    TitlesGrid.OnClickEliminar = OnClickEliminar;
     $("#GridView").DataTable();
-})(JobsGrid || (JobsGrid = {}));
+})(TitlesGrid || (TitlesGrid = {}));
 //# sourceMappingURL=Grid.js.map

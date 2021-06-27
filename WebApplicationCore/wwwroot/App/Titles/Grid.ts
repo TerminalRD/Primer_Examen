@@ -1,4 +1,4 @@
-﻿namespace DeparmentsGrid
+﻿namespace TitlesGrid
 {
     declare var MensajeApp;
 
@@ -14,7 +14,7 @@
         ComfirmAlert("¿Desea eliminar el registro?", "Eliminar", "warning", "#3085d6", "d33")
             .then(result => {
                 if (result.isConfirmed) {
-                    window.location.href = "/Jobs/Grid?handler=Eliminar&id=" + id;
+                    window.location.href = "/Titles/Grid?handler=Eliminar&id=" + id;
                 }
             });
     }

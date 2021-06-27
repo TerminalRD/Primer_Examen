@@ -30,6 +30,9 @@
     <TypeScriptCompile Update="wwwroot\App\Deparments\Grid.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Update="wwwroot\App\Titles\Grid.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
 
 </Project>

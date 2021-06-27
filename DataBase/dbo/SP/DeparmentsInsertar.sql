@@ -1,5 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[DeparmentsInsertar]
-	@Id_Departamento INT,
 	@Descripcion VARCHAR (250),
 	@Ubicacion VARCHAR (250),
 	@Estado BIT
@@ -10,14 +9,12 @@ AS
 			BEGIN TRY
 				INSERT INTO Departments
 				(
-					Id_Departamento
-					,Descripcion
+					Descripcion
 					,Ubicacion
 					,Estado
 				)
 				VALUES
 				(
-				@Id_Departamento,
 				@Descripcion,
 				@Ubicacion,
 				@Estado

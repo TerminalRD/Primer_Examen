@@ -1,6 +1,6 @@
 "use strict";
-var DeparmentsEdit;
-(function (DeparmentsEdit) {
+var TitlesEdit;
+(function (TitlesEdit) {
     var formulario = new Vue({
         data: {
             Formulario: "#FormEdit"
@@ -10,5 +10,5 @@ var DeparmentsEdit;
         }
     });
     formulario.$mount("#AppEdit");
-})(DeparmentsEdit || (DeparmentsEdit = {}));
+})(TitlesEdit || (TitlesEdit = {}));
 //# sourceMappingURL=Edit.js.map
