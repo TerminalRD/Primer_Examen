@@ -68,5 +68,13 @@
     <Build Include="dbo\SP\JobsInsertar.sql" />
     <Build Include="dbo\SP\JobsActualizar.sql" />
     <Build Include="dbo\SP\JobsEliminar.sql" />
+    <Build Include="dbo\SP\DeparmentsActualizar.sql" />
+    <Build Include="dbo\SP\DeparmentsEliminar.sql" />
+    <Build Include="dbo\SP\DeparmentsInsertar.sql" />
+    <Build Include="dbo\SP\DeparmentsObtener.sql" />
+    <Build Include="dbo\SP\TitlesActualizar.sql" />
+    <Build Include="dbo\SP\TitlesEliminar.sql" />
+    <Build Include="dbo\SP\TitlesInsertar.sql" />
+    <Build Include="dbo\SP\TitlesObtener.sql" />
   </ItemGroup>
 </Project>
