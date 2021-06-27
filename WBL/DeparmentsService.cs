@@ -37,7 +37,7 @@ namespace WBL
             }
         }
 
-        public async Task<DeparmentsEntity> GetById(DeparmentsEntity entity)//SP 
+        public async Task<DeparmentsEntity> GetById(DeparmentsEntity entity)//SP Obtener por ID
         {
             try
             {
